@@ -56,18 +56,14 @@ public class Mar01 {
 
         // 9. return the list of employees that have job title "Business Analyst"
         System.out.println("List of Employee objects that have job title \"Business Analyst\":");
-        List<Employee> businessAnalyst = new ArrayList<>();
-        for (Employee employee : employeeList) {
-            if (employee.getJobTitle().equals("Business Analyst")) {
-                businessAnalyst.add(employee);
-            }
-        }
+        List<Employee> businessAnalyst = employeeList.stream()
+                .filter(employee -> employee.getJobTitle().equals("Business Analyst"))
+                .toList();
         for (Employee employee : businessAnalyst) {
             System.out.print("Name: " + employee.getName() + "\t\t");
             System.out.println("Job title: " + employee.getJobTitle());
         }
         System.out.println();
-
     }
 
     // 3. Create a method that returns a list of Employee objects from the json file
@@ -78,45 +74,32 @@ public class Mar01 {
 
     // 4. Create a method that returns a list of Employee objects that have a salary greater than 10000
     public static List<Employee> employeeListNo4(List<Employee> employeeList) {
-        List<Employee> filteredEmployeeList = new ArrayList<>();
-        for (Employee employee : employeeList) {
-            if (employee.getSalary() > 10000) {
-                filteredEmployeeList.add(employee);
-            }
-        }
-        return filteredEmployeeList;
+        return employeeList.stream()
+                .filter(employee -> employee.getSalary() > 10000)
+                .toList();
     }
 
     // 5. Create a method that returns a list of Employee objects that have a salary greater than 10000 and live in San Francisco
     public static List<Employee> employeeListNo5(List<Employee> employeeList) {
-        List<Employee> filteredEmployeeList = new ArrayList<>();
-        for (Employee employee : employeeList) {
-            if (employee.getSalary() > 10000 && employee.getCity().equals("San Francisco")) {
-                filteredEmployeeList.add(employee);
-            }
-        }
-        return filteredEmployeeList;
+        return employeeList.stream()
+                .filter(employee -> employee.getSalary() > 10000)
+                .filter(employee -> employee.getCity().equals("San Francisco"))
+                .toList();
     }
 
     // 6. Create a method that returns a list of Employee objects that have a salary less than 10000 and live in Boston or New York
     public static List<Employee> employeeListNo6(List<Employee> employeeList) {
-        List<Employee> filteredEmployeeList = new ArrayList<>();
-        for (Employee employee : employeeList) {
-            if (employee.getSalary() < 10000 && (employee.getCity().equals("Boston") || employee.getCity().equals("New York"))) {
-                filteredEmployeeList.add(employee);
-            }
-        }
-        return filteredEmployeeList;
+        return employeeList.stream()
+                .filter(employee -> employee.getSalary() < 10000)
+                .filter(employee -> employee.getCity().equals("Boston") || employee.getCity().equals("New York"))
+                .toList();
     }
 
     // 7. Create a method that returns a list of Employee objects that live in Boston or New York and are older than 30
     public static List<Employee> employeeListNo7(List<Employee> employeeList) {
-        List<Employee> filteredEmployeeList = new ArrayList<>();
-        for (Employee employee : employeeList) {
-            if ((employee.getCity().equals("Boston") || employee.getCity().equals("New York")) && employee.getAge() > 30) {
-                filteredEmployeeList.add(employee);
-            }
-        }
-        return filteredEmployeeList;
+        return employeeList.stream()
+                .filter(employee -> (employee.getCity().equals("Boston") || employee.getCity().equals("New York")))
+                .filter(employee -> employee.getAge() > 30)
+                .toList();
     }
 }
