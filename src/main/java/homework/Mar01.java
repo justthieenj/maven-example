@@ -82,21 +82,24 @@ public class Mar01 {
     // 5. Create a method that returns a list of Employee objects that have a salary greater than 10000 and live in San Francisco
     public static List<Employee> employeeListNo5(List<Employee> employeeList) {
         return employeeList.stream()
-                .filter(employee -> employee.getSalary() > 10000 && employee.getCity().equals("San Francisco"))
+                .filter(employee -> employee.getSalary() > 10000)
+                .filter(employee -> employee.getCity().equals("San Francisco"))
                 .toList();
     }
 
     // 6. Create a method that returns a list of Employee objects that have a salary less than 10000 and live in Boston or New York
     public static List<Employee> employeeListNo6(List<Employee> employeeList) {
         return employeeList.stream()
-                .filter(employee -> employee.getSalary() < 10000 && (employee.getCity().equals("Boston") || employee.getCity().equals("New York")))
+                .filter(employee -> employee.getSalary() < 10000)
+                .filter(employee -> employee.getCity().equals("Boston") || employee.getCity().equals("New York"))
                 .toList();
     }
 
     // 7. Create a method that returns a list of Employee objects that live in Boston or New York and are older than 30
     public static List<Employee> employeeListNo7(List<Employee> employeeList) {
         return employeeList.stream()
-                .filter(employee -> (employee.getCity().equals("Boston") || employee.getCity().equals("New York")) && employee.getAge() > 30)
+                .filter(employee -> (employee.getCity().equals("Boston") || employee.getCity().equals("New York")))
+                .filter(employee -> employee.getAge() > 30)
                 .toList();
     }
 }
