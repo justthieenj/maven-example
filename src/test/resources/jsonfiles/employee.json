@@ -5,7 +5,15 @@
     "age": 25,
     "city": "New York",
     "jobTitle": "Developer",
-    "salary": 9000.25
+    "email": "john.doe@hotmail.com",
+    "salary": 9000.25,
+    "vehicle": {
+      "type": "car",
+      "make": "Toyota",
+      "model": "Camry",
+      "registration": "43-C1 99999",
+      "registrationDate": "2018/01/01"
+    }
   },
   {
     "id": 2,
@@ -13,7 +21,15 @@
     "age": 39,
     "city": "Boston",
     "jobTitle": "Quality Assurance",
-    "salary": 8000.5
+    "email": "peter.qa.gmail.com",
+    "salary": 8000.5,
+    "vehicle": {
+      "type": "motorcycle",
+      "make": "Honda",
+      "model": "CBR",
+      "registration": "43-B1 15445",
+      "registrationDate": "2015/12/31"
+    }
   },
   {
     "id": 3,
@@ -21,7 +37,15 @@
     "age": 48,
     "city": "Los Angeles",
     "jobTitle": "Quality Assurance",
-    "salary": 15000.75
+    "email": "sally.qa@outlook.com",
+    "salary": 15000.75,
+    "vehicle": {
+      "type": "car",
+      "make": "Toyota",
+      "model": "Auris",
+      "registration": "43-E1 48205",
+      "registrationDate": "2022/05/15"
+    }
   },
   {
     "id": 4,
@@ -29,7 +53,15 @@
     "age": 28,
     "city": "Chicago",
     "jobTitle": "Project Manager",
-    "salary": 19000
+    "email": "chicago_mark_zucc@company.org",
+    "salary": 19000,
+    "vehicle": {
+      "type": "car",
+      "make": "Toyota",
+      "model": "Corolla",
+      "registration": "43-D1 31245",
+      "registrationDate": "2019/04/06"
+    }
   },
   {
     "id": 5,
@@ -37,7 +69,15 @@
     "age": 50,
     "city": "San Francisco",
     "jobTitle": "Developer",
-    "salary": 11000.5
+    "email": "david@awesomedev@net",
+    "salary": 11000.5,
+    "vehicle": {
+      "type": "car",
+      "make": "Mazda",
+      "model": "3",
+      "registration": "43-F1 55555",
+      "registrationDate": "2019/01/01"
+    }
   },
   {
     "id": 6,
@@ -45,7 +85,15 @@
     "age": 35,
     "city": "New York",
     "jobTitle": "Developer",
-    "salary": 12000
+    "email": "jane_ny_us@gmail.com",
+    "salary": 12000,
+    "vehicle": {
+      "type": "car",
+      "make": "Toyota",
+      "model": "Camry",
+      "registration": "43-C1 41742",
+      "registrationDate": "2018/12/12"
+    }
   },
   {
     "id": 7,
@@ -53,7 +101,14 @@
     "age": 45,
     "city": "Boston",
     "jobTitle": "Business Analyst",
-    "salary": 18000
+    "salary": 18000,
+    "vehicle": {
+      "type": "car",
+      "make": "Mercedes",
+      "model": "C Class",
+      "registration": "43-E1 84148",
+      "registrationDate": "2022/01/01"
+    }
   },
   {
     "id": 8,
@@ -61,15 +116,29 @@
     "age": 30,
     "city": "Los Angeles",
     "jobTitle": "Developer",
-    "salary": 10000
+    "salary": 10000,
+    "vehicle": {
+      "type": "car",
+      "make": "Mercedes",
+      "model": "C Class",
+      "registration": "43-D1 82551",
+      "registrationDate": "2009/01/01"
+    }
   },
   {
     "id": 9,
     "name": "Paul",
     "age": 40,
     "city": "Chicago",
-    "jobTitle": "Quality Assurance",
-    "salary": 13000
+    "jobTitle": "Business Analyst",
+    "salary": 13000,
+    "vehicle": {
+      "type": "car",
+      "make": "Audi",
+      "model": "A4",
+      "registration": "43-C1 12345",
+      "registrationDate": "2020/08/28"
+    }
   },
   {
     "id": 10,
@@ -77,6 +146,13 @@
     "age": 55,
     "city": "San Francisco",
     "jobTitle": "Project Manager",
-    "salary": 20000
+    "salary": 20000,
+    "vehicle": {
+      "type": "car",
+      "make": "Toyota",
+      "model": "Prius",
+      "registration": "43-C1 16372",
+      "registrationDate": "2017/02/02"
+    }
   }
 ]

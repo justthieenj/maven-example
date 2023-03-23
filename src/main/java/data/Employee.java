@@ -9,5 +9,7 @@ public class Employee {
     private int age;
     private String city;
     private String jobTitle;
+    private String email;
     private Double salary;
+    private Vehicle vehicle;
 }
