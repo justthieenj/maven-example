@@ -1,7 +1,7 @@
 package homework;
 
-import data.Employee;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import data.Employee;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.util.List;
 public class Mar01 {
     public static void main(String[] args) throws IOException {
         // 1. Read file employee.json from the resources folder
-        List<Employee> employeeList = readEmployeeJsonFile("src/test/resources/jsonfiles/employee.json");
+        List<Employee> employeeList = readEmployeeJsonFile("src/test/resources/jsonfiles/employee.json"); // unmodifiable list
 
         System.out.println("List of Employee objects that have a salary greater than 10000:");
         for (Employee employee : employeeListNo4(employeeList)) {
@@ -47,7 +47,8 @@ public class Mar01 {
 
         // 8. Sort the list of employees by salary in descending order
         System.out.println("List of Employee objects sorted by salary in descending order:");
-        employeeList.sort(Comparator.comparing(Employee::getSalary).reversed());
+        var cloneList = new ArrayList<>(employeeList); // clone list modifiable
+        cloneList.sort(Comparator.comparing(Employee::getSalary).reversed());
         for (Employee employee : employeeList) {
             System.out.print("Name: " + employee.getName() + "\t\t");
             System.out.println("Salary: " + employee.getSalary());
@@ -69,7 +70,7 @@ public class Mar01 {
     // 3. Create a method that returns a list of Employee objects from the json file
     public static List<Employee> readEmployeeJsonFile(String path) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        return new ArrayList<>(List.of(mapper.readValue(new File(path), Employee[].class)));
+        return List.of(mapper.readValue(new File(path), Employee[].class));
     }
 
     // 4. Create a method that returns a list of Employee objects that have a salary greater than 10000
