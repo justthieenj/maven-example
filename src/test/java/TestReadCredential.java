@@ -24,6 +24,12 @@ public class TestReadCredential {
         System.out.printf("%s - %s", user3.getEmail(), user3.getPassword());
     }
 
+    @Test
+    public void testReadCredential2() {
+        var listCredential = readJsonFile();
+        listCredential.forEach(System.out::println);
+    }
+
     public static List<Credential> readJsonFile() {
         try {
             var path = "src/test/resources/credential.json";
