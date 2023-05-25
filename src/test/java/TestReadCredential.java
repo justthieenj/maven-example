@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -34,7 +33,8 @@ public class TestReadCredential {
         try {
             var path = "src/test/resources/credential.json";
             ObjectMapper mapper = new ObjectMapper();
-            return new ArrayList<>(List.of(mapper.readValue(new File(path), Credential[].class)));
+            Credential[] credentials = mapper.readValue(new File(path), Credential[].class);
+            return List.of(credentials);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
